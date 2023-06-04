@@ -1,2 +1,3 @@
 adxl_results/belts/*.csv
+adxl_results/inputshaper/*.csv
 adxl_results/vibrations/*.tar.gz
