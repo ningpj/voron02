@@ -34,7 +34,7 @@ for ARG in $@; do
    esac
 done
 
-if [ $mcu = 0 ] && [ $rp = 0 ]; then
+if [ $mcu = 0 ] && [ $rp = 0 ] && [ $kexpand = 0 ]; then
   echo Nothing to do, exiting.
   exit 0
 fi
