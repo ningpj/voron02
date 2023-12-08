@@ -21,12 +21,10 @@ for ARG in $@; do
      "--rp")
        rp=1
      ;;
-     "--expander")
-       kexpand=1
-     ;;
      "--all")
        rp=1
        mcu=1
+       sht36=1
      ;;
      "--flash")
        flash=1
