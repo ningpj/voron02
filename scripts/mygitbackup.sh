@@ -40,8 +40,7 @@ for repo in "${gitrepos[@]}"; do
 done
 
 # trigger moonraker backup
-echo -e "\nBacking up moonraker database ..."
-~/moonraker/scripts/backup-database.sh -o ${moonraker_backup}
+cp ~/printer_data/database/moonraker-sql.db ${moonraker_backup}
 
 # push updates to remote git repo
 echo -e "\nPushing GIT updates ..."
