@@ -6,6 +6,8 @@ Klipper configuration backups.
 
 Backups for Voron Design VORON 0.2 with 120mm Bed, SKR Pico mmu, Mellow Fly SHT-36 v2/UTOC & Pi 4 2GB. 
 
+<img width="600" height="811" alt="voron02" src="https://github.com/user-attachments/assets/0eb7f592-bd49-4b64-bbb7-7e9b791fef5d" />
+
 ## SKR Pico v1.0 PIN Assignments
 
 |**Component**|**Description**|**PIN**
