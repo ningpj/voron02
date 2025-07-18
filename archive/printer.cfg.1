@@ -158,6 +158,7 @@ interpolate:                True                                ; enable for tmc
 sense_resistor:             0.110
 stealthchop_threshold:      0
 diag_pin:                   ^gpio4                              ; install jumper on diag for sensorless homing
+;driver_SGTHRS:              90                                 ; tune for sensorless homing (255 Max sensitivity)
 
 ; TMC2209 tune: Moons MS14HS5P4150-11(1.5A 2.2hm 3.6mH) - Target peak 0.9A
 run_current:                0.636
@@ -188,6 +189,7 @@ interpolate:                True                                ; enable for tmc
 sense_resistor:             0.110
 stealthchop_threshold:      0 
 diag_pin:                   ^gpio3                              ; install jumper on diag for sensorless homing
+;driver_SGTHRS:              90  												        ; tune for sensorless homing (255 Max sensitivity)
 
 ; TMC2209 tune: Moons MS14HS5P4150-11(1.5A 2.2hm 3.6mH) - Target peak 0.9A
 run_current:                0.636
@@ -237,7 +239,7 @@ max_extrude_only_velocity:  120                                 ; orbiter 2.0
 max_extrude_only_distance:  500                                 ; increase to allow filament load & unload operations
 max_extrude_cross_section:  5                                   ; override to support fat purge lines and blobs
 
-nozzle_diameter:            0.600
+nozzle_diameter:            0.400
 filament_diameter:          1.750
 heater_pin:                 sht:HE0
 sensor_pin:                 sht:TH0
@@ -313,7 +315,7 @@ gcode:
    _set_neos NEOCHAIN=bed_neo STATUS=homing
    
    G90
-   G0 Z5 F600                                                    ; safety move the bed away a little
+   G0 Z5 F600                                                    ; move away a little
    {% set home_all = 'X' not in params and 'Y' not in params and 'Z' not in params %}
 
    {% if home_all or 'X' in params %}
