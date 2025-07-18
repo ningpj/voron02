@@ -8,9 +8,8 @@ Backups for Voron Design VORON 0.2 with 120mm Bed, SKR Pico mmu, Mellow Fly SHT-
 
 ## SKR Pico v1.0 PIN Assignments
 
-|**Component**|**PIN**
+|**Component**|**Description**!**PIN**
 |-|-|-
-
 |HE|Hotend Heater|GPIO23
 |HB|Bed|GPIO21
 |FAN1|Chanber COB LEDs|GPIO17
