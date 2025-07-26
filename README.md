@@ -12,9 +12,8 @@ Backups for Voron Design VORON 0.2 with 120mm Bed, SKR Pico mmu, Mellow Fly SHT-
 
 |**Component**|**Description**|**PIN**
 |-|-|-
-|HE|Hotend Heater|GPIO23
 |HB|Bed|GPIO21
-|FAN1|Chanber COB LEDs|GPIO17
+|FAN1|Chamber COB LEDs|GPIO17
 |FAN2|Controller Fan|GPIO18 - daisy chained
 |FAN2|Stealth Skirt Fans|GPIO18 - daisy chained
 |FAN3|Nevermore v4 Micro|GPIO20
@@ -22,3 +21,10 @@ Backups for Voron Design VORON 0.2 with 120mm Bed, SKR Pico mmu, Mellow Fly SHT-
 |TH0|Chamber Thermistor|GPIO27
 |Z-STOP|Z Endstop|GPIO25
 |RGB|Neopixels|GPIO24
+
+## Mellow SHT-36v2 PIN Assignments
+|**Component**|**Description**|**PIN**
+|-|-|-
+|HE0|Hotend Heater|SHT:HE0
+|TH0|Hotend Sensor|SHT:TH0
+|FAN1|Part Fan|SHT:FAN1
