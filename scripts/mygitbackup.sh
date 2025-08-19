@@ -32,9 +32,9 @@ for repo in "${gitrepos[@]}"; do
       if [ -e ${repo}/.version ]; then
          rev="${trimedRepo} on commit: $(head -n 1 ${repo}/.version)"
       else
-         rev="${trimedRepo} on commit: $(git -C ${repo} tag -l | tail -1)-$(git -C ${repo} rev-parse --short=7 HEAD)"
-         echo rev="${trimedRepo} on commit: $(git -C ${repo} tag --sort=-version:refname | head -n 1)"
-         echo $rev
+         #rev="${trimedRepo} on commit: $(git -C ${repo} tag -l | tail -1)-$(git -C ${repo} rev-parse --short=7 HEAD)"
+         rev="${trimedRepo} on commit: $(git -C ${repo} tag --sort=-version:refname | head -n 1)"
+         #echo $rev
       fi
       gitrevs+=("-m \"${rev}\"")
       echo $rev
