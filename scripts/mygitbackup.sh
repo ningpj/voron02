@@ -33,6 +33,7 @@ for repo in "${gitrepos[@]}"; do
          rev="${trimedRepo} on commit: $(head -n 1 ${repo}/.version)"
       else
          rev="${trimedRepo} on commit: $(git -C ${repo} tag -l | tail -1)-$(git -C ${repo} rev-parse --short=7 HEAD)"
+         echo rev="${trimedRepo} on commit: $(git -C ${repo} tag -l | tail -1)-$(git -C ${repo} rev-parse --short=7 HEAD)"
       fi
       gitrevs+=("-m \"${rev}\"")
       echo $rev
