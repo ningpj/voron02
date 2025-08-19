@@ -34,6 +34,7 @@ for repo in "${gitrepos[@]}"; do
       else
          rev="${trimedRepo} on commit: $(git -C ${repo} tag -l | tail -1)-$(git -C ${repo} rev-parse --short=7 HEAD)"
          echo rev="${trimedRepo} on commit: $(git -C ${repo} tag --sort=-version:refname | tail -1)"
+         echo "${trimedRepo} on commit: $(git -C ${repo} tag --sort=-version:refname)"
          echo $rev
       fi
       gitrevs+=("-m \"${rev}\"")
