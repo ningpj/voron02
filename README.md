@@ -5,6 +5,10 @@ Klipper configuration backups.
 ## Description
 
 Backups for Voron Design VORON 0.2 with 120mm Bed, SKR Pico mmu, Mellow Fly SHT-36 v2/UTOC & Pi 4 2GB. 
+1. Mini Fridge door
+2. Tulip Gantry
+3. Yavoth Extruder, Dragon Ace HE, Orbiter 2.0 Extruder
+4. Stealth Skirts & wide feet
 
 <img width="600" height="862" alt="woron02" src="https://github.com/user-attachments/assets/227d72b1-955b-42cb-bf9b-ec28c9ea6552" />
 
