@@ -10,7 +10,8 @@ Backups for Voron Design VORON 0.2 with 120mm Bed, SKR Pico mmu, Mellow Fly SHT-
 3. Yavoth Extruder, Dragon Ace HE, Orbiter 2.0 Extruder
 4. Stealth Skirts & wide feet
 
-<img width="600" height="862" alt="woron02" src="https://github.com/user-attachments/assets/227d72b1-955b-42cb-bf9b-ec28c9ea6552" />
+<img width="600" height="870" alt="voron02" src="https://github.com/user-attachments/assets/771a66b5-65c0-43b8-a071-cab2198ce950" />
+
 
 
 ## SKR Pico v1.0 PIN Assignments
