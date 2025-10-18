@@ -41,5 +41,5 @@ Backups for Voron Design VORON 0.2 with 120mm Bed, SKR Pico mmu, Mellow Fly SHT-
 |TH0|Hotend Sensor|SHT:TH0
 |FAN0|Hotend Fan|SHT:FAN0
 |FAN1|Part Fan|SHT:FAN1
-|PROBE_2|20mm 20x20x6 Toolhead Fan|SHT:PROBE_2
+|PROBE_2|20x20x6 Toolhead Fan|SHT:PROBE_2
 
