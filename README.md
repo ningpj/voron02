@@ -11,7 +11,7 @@ Backups for Voron Design VORON 0.2 with 120mm Bed, SKR Pico mmu, Mellow Fly SHT-
 4. Yavoth Extruder  (https://github.com/chirpy2605/voron/tree/main/V0/Yavoth)
 5. Dragon Ace HE, Orbiter 2.0
 6. Stealth Skirts & wide feet
-7. Siboor, steel Kirigami bed
+7. Siboor, Steel Kirigami bed
 8. BTT PITFT43 screen with custom mount
 9. Split Z-cover retrofit remix (https://www.printables.com/model/1356175-voron-02-z-motor-cover-plate-remix-360-cover)
 10. Tophat sealing blocks (https://www.printables.com/model/728972-voron-v02-tophat-1515-sealing-block)
