@@ -9,7 +9,7 @@ Backups for Voron Design VORON 0.2 with 120mm Bed, SKR Pico mmu, Mellow Fly SHT-
 + Mini Fridge door
 + Tulip 2.0 Gantry (https://github.com/Amekyras/tulip)
 + Yavoth Extruder  (https://github.com/chirpy2605/voron/tree/main/V0/Yavoth)
-+. Dragon Ace HE, Orbiter 2.0
++ Dragon Ace HE, Orbiter 2.0
 + Stealth Skirts & wide feet
 + Siboor, Steel Kirigami bed
 + BTT PITFT43 screen with custom mount
