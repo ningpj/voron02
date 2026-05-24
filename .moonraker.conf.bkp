@@ -96,16 +96,16 @@ requirements = scripts/KlipperScreen-requirements.txt
 install_script = scripts/KlipperScreen-install.sh
 managed_services = KlipperScreen
 
+[spoolman]
+server = http://io.local:7912
+sync_rate = 5
+
 [update_manager emu_nfc_reader]
 type = git_repo
-path = /home/pi/NFC-Reader
-origin = https://github.com/cwiegert/NFC-Reader
+path = /home/pi/HH-RFID-Reader
+origin = https://github.com/cwiegert/HH-RFID-Reader.git
 primary_branch = main
 managed_services = klipper
 install_script = install.sh
 info_tags = desc=EMU NFC Gate Reader for Happy Hare
-
-[spoolman]
-server = http://io.local:7912
-sync_rate = 5
 
