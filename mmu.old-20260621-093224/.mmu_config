@@ -73,7 +73,7 @@ CONFIG_PIN_GANTRY_BUMPER_SERVO="" #~DEFAULT~#
 # CONFIG_MMU_HAS_SERVO_CUTTER is not set #~DEFAULT~#
 CONFIG_PIN_SERVO_CUTTER_SERVO="" #~DEFAULT~#
 # CONFIG_CHOICE_FORM_TIP_MACRO_FORM_TIP is not set #~DEFAULT~#
-CONFIG_CHOICE_FORM_TIP_MACRO_CUT_TIP=y
+CONFIG_CHOICE_FORM_TIP_MACRO_CUT_TIP=y #~DEFAULT~#
 # CONFIG_CHOICE_FORM_TIP_MACRO_SLICER is not set #~DEFAULT~#
 # CONFIG_CHOICE_FORM_TIP_MACRO_OTHER is not set #~DEFAULT~#
 CONFIG_FORM_TIP_MACRO_OTHER="-enter-your-macro-"
@@ -92,21 +92,13 @@ CONFIG_PIN_BLOBIFIER_STEPPER_ENDSTOP="" #~DEFAULT~#
 CONFIG_PIN_BLOBIFIER_STEPPER_UART="" #~DEFAULT~#
 CONFIG_PARAM_BLOBIFIER_STEPPER_RUN_CURRENT="0.6" #~DEFAULT~#
 # CONFIG_CHOICE_PURGE_MACRO_PURGE is not set #~DEFAULT~#
-# CONFIG_CHOICE_PURGE_MACRO_SLICER is not set #~DEFAULT~#
-CONFIG_CHOICE_PURGE_MACRO_OTHER=y
-CONFIG_PURGE_MACRO_OTHER=""
+CONFIG_CHOICE_PURGE_MACRO_SLICER=y
+# CONFIG_CHOICE_PURGE_MACRO_OTHER is not set
+CONFIG_PURGE_MACRO_OTHER="-enter-your-macro-"
 CONFIG_PARAM_PURGE_MACRO="" #~DEFAULT~#
-# CONFIG_BOOL_FORCE_PURGE_STANDALONE is not set
+# CONFIG_BOOL_FORCE_PURGE_STANDALONE is not set #~DEFAULT~#
 CONFIG_PARAM_FORCE_PURGE_STANDALONE=0 #~DEFAULT~#
 CONFIG_PARAM_EXTRUDER_PURGE_CURRENT=100 #~DEFAULT~#
-CONFIG_MMU_SUPPORTS_FANS=y
-CONFIG_MMU_HAS_FANS=y
-CONFIG_PARAM_FAN_MAX_POWER=1.0 #~DEFAULT~#
-CONFIG_PARAM_FAN_KICK_START_TIME=0.5 #~DEFAULT~#
-CONFIG_PIN_FAN_0="unit0_gate0:PA15" #~DEFAULT~#
-CONFIG_PIN_FAN_1="unit0_gate1:PA15" #~DEFAULT~#
-CONFIG_PIN_FAN_2="unit0_gate2:PA15" #~DEFAULT~#
-CONFIG_PIN_FAN_3="unit0_gate3:PA15" #~DEFAULT~#
 CONFIG_PARAM_GEAR_FROM_FILAMENT_BUFFER_SPEED=350
 CONFIG_PARAM_GEAR_FROM_FILAMENT_BUFFER_ACCEL=200
 CONFIG_PARAM_GEAR_UNLOAD_SPEED=350
@@ -269,14 +261,7 @@ CONFIG_PARAM_EXIT_LEDS="neopixel:unit0_gate0_leds (1,2,3,4); neopixel:unit0_gate
 CONFIG_PARAM_ENTRY_LEDS="neopixel:unit0_gate0_box (1); neopixel:unit0_gate1_box (1); neopixel:unit0_gate2_box (1); neopixel:unit0_gate3_box (1)" #~DEFAULT~#
 CONFIG_PARAM_STATUS_LEDS="" #~DEFAULT~#
 CONFIG_PARAM_LOGO_LEDS="" #~DEFAULT~#
-CONFIG_PIN_NEOPIXEL_0="unit0_gate0:PA4" #~DEFAULT~#
-CONFIG_PIN_NEOPIXEL_1="unit0_gate1:PA4" #~DEFAULT~#
-CONFIG_PIN_NEOPIXEL_2="unit0_gate2:PA4" #~DEFAULT~#
-CONFIG_PIN_NEOPIXEL_3="unit0_gate3:PA4" #~DEFAULT~#
-CONFIG_PIN_NEOPIXEL_BOX_0="unit0_gate0:PA2" #~DEFAULT~#
-CONFIG_PIN_NEOPIXEL_BOX_1="unit0_gate1:PA2" #~DEFAULT~#
-CONFIG_PIN_NEOPIXEL_BOX_2="unit0_gate2:PA2" #~DEFAULT~#
-CONFIG_PIN_NEOPIXEL_BOX_3="unit0_gate3:PA2" #~DEFAULT~#
+CONFIG_PIN_NEOPIXEL="" #~DEFAULT~#
 # CONFIG_MMU_HAS_ESPOOLER is not set #~DEFAULT~#
 CONFIG_MMU_HAS_SYNC_FEEDBACK_BUFFER=y #~DEFAULT~#
 CONFIG_PARAM_SYNC_FEEDBACK_BUFFER_NAME="unit0" #~DEFAULT~#
@@ -397,14 +382,18 @@ CONFIG_PIN_EJECT_BUTTON_1="^unit0_gate1:PB2" #~DEFAULT~#
 CONFIG_PIN_EJECT_BUTTON_2="^unit0_gate2:PB2" #~DEFAULT~#
 CONFIG_PIN_EJECT_BUTTON_3="^unit0_gate3:PB2" #~DEFAULT~#
 # CONFIG_BOARD_TYPE_EBB_1_0 is not set
+CONFIG_PIN_NEOPIXEL_0="unit0_gate0:PA4" #~DEFAULT~#
+CONFIG_PIN_NEOPIXEL_1="unit0_gate1:PA4" #~DEFAULT~#
+CONFIG_PIN_NEOPIXEL_2="unit0_gate2:PA4" #~DEFAULT~#
+CONFIG_PIN_NEOPIXEL_3="unit0_gate3:PA4" #~DEFAULT~#
 CONFIG_BOARD_TYPE_SLB_1_0=y
+CONFIG_PIN_NEOPIXEL_BOX_0="unit0_gate0:PA2" #~DEFAULT~#
+CONFIG_PIN_NEOPIXEL_BOX_1="unit0_gate1:PA2" #~DEFAULT~#
+CONFIG_PIN_NEOPIXEL_BOX_2="unit0_gate2:PA2" #~DEFAULT~#
+CONFIG_PIN_NEOPIXEL_BOX_3="unit0_gate3:PA2" #~DEFAULT~#
 # CONFIG_BOARD_TYPE_OTHER is not set
 #   MMU Features/Additions
 #     Led config
-#       Neopixel per-gate pins    
-#       end of Neopixel per-gate pins    
-#       Neopixel box pins         
-#       end of Neopixel box pins         
 #     end of Led config
 #     Buffer config
 #       _
@@ -415,10 +404,6 @@ CONFIG_BOARD_TYPE_SLB_1_0=y
 #     Environment sensor config
 #     end of Environment sensor config
 #     Pins must be set under "Pins" section
-#     Fan configuration
-#     end of Fan configuration
-#     Fan pins
-#     end of Fan pins
 #     _
 #     Filament sensors
 #     end of Filament sensors
@@ -461,10 +446,8 @@ CONFIG_PARAM_GEAR_TMC="tmc2209" #~DEFAULT~#
 #     end of Mmu entry sensor pins
 #     Mmu exit sensor pins
 #     end of Mmu exit sensor pins
-#     Neopixel per-gate pins    
-#     end of Neopixel per-gate pins    
-#     Neopixel box pins         
-#     end of Neopixel box pins         
+#     Neopixel per-gate pins
+#     end of Neopixel per-gate pins
 #   end of Pins / TMC
 #   _
 #   Toolhead sensors/settings
@@ -485,10 +468,6 @@ CONFIG_PARAM_GEAR_TMC="tmc2209" #~DEFAULT~#
 #     _
 #     _Essential purge configuration
 #   end of Purging
-#   Fan configuration
-#   end of Fan configuration
-#   Fan pins
-#   end of Fan pins
 #   Macro Variables
 #     Print start/end (_MMU_SOFTWARE)
 #       _Print START behavior
