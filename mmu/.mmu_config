@@ -269,6 +269,13 @@ CONFIG_PIN_NEOPIXEL_BOX_0="unit0_gate0:PA2" #~DEFAULT~#
 CONFIG_PIN_NEOPIXEL_BOX_1="unit0_gate1:PA2" #~DEFAULT~#
 CONFIG_PIN_NEOPIXEL_BOX_2="unit0_gate2:PA2" #~DEFAULT~#
 CONFIG_PIN_NEOPIXEL_BOX_3="unit0_gate3:PA2" #~DEFAULT~#
+CONFIG_MMU_HAS_FANS=y #~DEFAULT~#
+CONFIG_PARAM_FAN_MAX_POWER=1.0 #~DEFAULT~#
+CONFIG_PARAM_FAN_KICK_START_TIME=0.5 #~DEFAULT~#
+CONFIG_PIN_FAN_0="unit0_gate0:PA15" #~DEFAULT~#
+CONFIG_PIN_FAN_1="unit0_gate1:PA15" #~DEFAULT~#
+CONFIG_PIN_FAN_2="unit0_gate2:PA15" #~DEFAULT~#
+CONFIG_PIN_FAN_3="unit0_gate3:PA15" #~DEFAULT~#
 # CONFIG_MMU_HAS_ESPOOLER is not set #~DEFAULT~#
 CONFIG_MMU_HAS_SYNC_FEEDBACK_BUFFER=y #~DEFAULT~#
 CONFIG_PARAM_SYNC_FEEDBACK_BUFFER_NAME="unit0" #~DEFAULT~#
@@ -292,23 +299,63 @@ CONFIG_PARAM_ANALOG_NEUTRAL_POINT=0.4999
 CONFIG_PARAM_ANALOG_GAMMA=1.0 #~DEFAULT~#
 CONFIG_BOOL_REGISTER_BUFFER_SENSORS=y #~DEFAULT~#
 CONFIG_PARAM_REGISTER_BUFFER_SENSORS=1 #~DEFAULT~#
+CONFIG_MMU_CREATE_MCU_ENVIRONMENT_SENSORS=y
 CONFIG_MMU_HAS_ENVIRONMENT_SENSOR=y #~DEFAULT~#
 CONFIG_MMU_HAS_PER_GATE_ENV_SENSORS=y #~DEFAULT~#
-CONFIG_PARAM_ENVIRONMENT_SENSORS="unit0_env0, unit0_env1, unit0_env2, unit0_env3" #~DEFAULT~#
+CONFIG_PARAM_ENVIRONMENT_SENSOR_NAME_0="unit0_env0" #~DEFAULT~#
+# CONFIG_CHOICE_ENVIRONMENT_SENSOR_TYPE_AHT1X_0 is not set #~DEFAULT~#
+CONFIG_CHOICE_ENVIRONMENT_SENSOR_TYPE_AHT2X_0=y #~DEFAULT~#
+# CONFIG_CHOICE_ENVIRONMENT_SENSOR_TYPE_AHT3X_0 is not set #~DEFAULT~#
+# CONFIG_CHOICE_ENVIRONMENT_SENSOR_TYPE_BME280_0 is not set #~DEFAULT~#
+CONFIG_PARAM_ENVIRONMENT_SENSOR_REPORT_TIME_0=60 #~DEFAULT~#
+CONFIG_CHOICE_ENVIRONMENT_SENSOR_I2C_HARDWARE_0=y #~DEFAULT~#
+# CONFIG_CHOICE_ENVIRONMENT_SENSOR_I2C_SOFTWARE_0 is not set #~DEFAULT~#
+CONFIG_CHOICE_ENVIRONMENT_SENSOR_I2C_BUS_I2C2_0=y #~DEFAULT~#
+# CONFIG_CHOICE_ENVIRONMENT_SENSOR_I2C_BUS_I2C3_0 is not set #~DEFAULT~#
+CONFIG_PARAM_ENVIRONMENT_SENSOR_I2C_ADDRESS_0=56 #~DEFAULT~#
+CONFIG_PARAM_ENVIRONMENT_SENSOR_NAME_1="unit0_env1" #~DEFAULT~#
+# CONFIG_CHOICE_ENVIRONMENT_SENSOR_TYPE_AHT1X_1 is not set #~DEFAULT~#
+CONFIG_CHOICE_ENVIRONMENT_SENSOR_TYPE_AHT2X_1=y #~DEFAULT~#
+# CONFIG_CHOICE_ENVIRONMENT_SENSOR_TYPE_AHT3X_1 is not set #~DEFAULT~#
+# CONFIG_CHOICE_ENVIRONMENT_SENSOR_TYPE_BME280_1 is not set #~DEFAULT~#
+CONFIG_PARAM_ENVIRONMENT_SENSOR_REPORT_TIME_1=60 #~DEFAULT~#
+CONFIG_CHOICE_ENVIRONMENT_SENSOR_I2C_HARDWARE_1=y #~DEFAULT~#
+# CONFIG_CHOICE_ENVIRONMENT_SENSOR_I2C_SOFTWARE_1 is not set #~DEFAULT~#
+CONFIG_CHOICE_ENVIRONMENT_SENSOR_I2C_BUS_I2C2_1=y #~DEFAULT~#
+# CONFIG_CHOICE_ENVIRONMENT_SENSOR_I2C_BUS_I2C3_1 is not set #~DEFAULT~#
+CONFIG_PARAM_ENVIRONMENT_SENSOR_I2C_ADDRESS_1=56 #~DEFAULT~#
+CONFIG_PARAM_ENVIRONMENT_SENSOR_NAME_2="unit0_env2" #~DEFAULT~#
+# CONFIG_CHOICE_ENVIRONMENT_SENSOR_TYPE_AHT1X_2 is not set #~DEFAULT~#
+CONFIG_CHOICE_ENVIRONMENT_SENSOR_TYPE_AHT2X_2=y #~DEFAULT~#
+# CONFIG_CHOICE_ENVIRONMENT_SENSOR_TYPE_AHT3X_2 is not set #~DEFAULT~#
+# CONFIG_CHOICE_ENVIRONMENT_SENSOR_TYPE_BME280_2 is not set #~DEFAULT~#
+CONFIG_PARAM_ENVIRONMENT_SENSOR_REPORT_TIME_2=60 #~DEFAULT~#
+CONFIG_CHOICE_ENVIRONMENT_SENSOR_I2C_HARDWARE_2=y #~DEFAULT~#
+# CONFIG_CHOICE_ENVIRONMENT_SENSOR_I2C_SOFTWARE_2 is not set #~DEFAULT~#
+CONFIG_CHOICE_ENVIRONMENT_SENSOR_I2C_BUS_I2C2_2=y #~DEFAULT~#
+# CONFIG_CHOICE_ENVIRONMENT_SENSOR_I2C_BUS_I2C3_2 is not set #~DEFAULT~#
+CONFIG_PARAM_ENVIRONMENT_SENSOR_I2C_ADDRESS_2=56 #~DEFAULT~#
+CONFIG_PARAM_ENVIRONMENT_SENSOR_NAME_3="unit0_env3" #~DEFAULT~#
+# CONFIG_CHOICE_ENVIRONMENT_SENSOR_TYPE_AHT1X_3 is not set #~DEFAULT~#
+CONFIG_CHOICE_ENVIRONMENT_SENSOR_TYPE_AHT2X_3=y #~DEFAULT~#
+# CONFIG_CHOICE_ENVIRONMENT_SENSOR_TYPE_AHT3X_3 is not set #~DEFAULT~#
+# CONFIG_CHOICE_ENVIRONMENT_SENSOR_TYPE_BME280_3 is not set #~DEFAULT~#
+CONFIG_PARAM_ENVIRONMENT_SENSOR_REPORT_TIME_3=60 #~DEFAULT~#
+CONFIG_CHOICE_ENVIRONMENT_SENSOR_I2C_HARDWARE_3=y #~DEFAULT~#
+# CONFIG_CHOICE_ENVIRONMENT_SENSOR_I2C_SOFTWARE_3 is not set #~DEFAULT~#
+CONFIG_CHOICE_ENVIRONMENT_SENSOR_I2C_BUS_I2C2_3=y #~DEFAULT~#
+# CONFIG_CHOICE_ENVIRONMENT_SENSOR_I2C_BUS_I2C3_3 is not set #~DEFAULT~#
+CONFIG_PARAM_ENVIRONMENT_SENSOR_I2C_ADDRESS_3=56 #~DEFAULT~#
 # CONFIG_MMU_HAS_HEATER is not set #~DEFAULT~#
 CONFIG_MMU_HAS_PER_GATE_HEATERS=y #~DEFAULT~#
 CONFIG_PARAM_FILAMENT_HEATERS="unit0_heater0, unit0_heater1, unit0_heater2, unit0_heater3" #~DEFAULT~#
 CONFIG_MMU_HAS_EJECT_BUTTONS=y #~DEFAULT~#
+CONFIG_PIN_EJECT_BUTTON_0="^unit0_gate0:PB2" #~DEFAULT~#
+CONFIG_PIN_EJECT_BUTTON_1="^unit0_gate1:PB2" #~DEFAULT~#
+CONFIG_PIN_EJECT_BUTTON_2="^unit0_gate2:PB2" #~DEFAULT~#
+CONFIG_PIN_EJECT_BUTTON_3="^unit0_gate3:PB2" #~DEFAULT~#
 # CONFIG_MMU_HAS_ENCODER is not set #~DEFAULT~#
 # CONFIG_MMU_HAS_FILAMENT_BUFFER is not set #~DEFAULT~#
-CONFIG_MMU_SUPPORTS_FANS=y
-CONFIG_MMU_HAS_FANS=y
-CONFIG_PARAM_FAN_MAX_POWER=1.0 #~DEFAULT~#
-CONFIG_PARAM_FAN_KICK_START_TIME=0.5 #~DEFAULT~#
-CONFIG_PIN_FAN_0="unit0_gate0:PA15" #~DEFAULT~#
-CONFIG_PIN_FAN_1="unit0_gate1:PA15" #~DEFAULT~#
-CONFIG_PIN_FAN_2="unit0_gate2:PA15" #~DEFAULT~#
-CONFIG_PIN_FAN_3="unit0_gate3:PA15" #~DEFAULT~#
 CONFIG_MMU_HAS_SENSOR_ENTRY=y #~DEFAULT~#
 CONFIG_MMU_HAS_SENSOR_EXIT=y #~DEFAULT~#
 # CONFIG_MMU_HAS_SENSOR_SHARED_EXIT is not set #~DEFAULT~#
@@ -392,37 +439,46 @@ CONFIG_PIN_EXIT_SENSOR_0="^unit0_gate0:PA0" #~DEFAULT~#
 CONFIG_PIN_EXIT_SENSOR_1="^unit0_gate1:PA0" #~DEFAULT~#
 CONFIG_PIN_EXIT_SENSOR_2="^unit0_gate2:PA0" #~DEFAULT~#
 CONFIG_PIN_EXIT_SENSOR_3="^unit0_gate3:PA0" #~DEFAULT~#
-CONFIG_PIN_EJECT_BUTTON_0="^unit0_gate0:PB2" #~DEFAULT~#
-CONFIG_PIN_EJECT_BUTTON_1="^unit0_gate1:PB2" #~DEFAULT~#
-CONFIG_PIN_EJECT_BUTTON_2="^unit0_gate2:PB2" #~DEFAULT~#
-CONFIG_PIN_EJECT_BUTTON_3="^unit0_gate3:PB2" #~DEFAULT~#
 # CONFIG_BOARD_TYPE_EBB_1_0 is not set
 CONFIG_BOARD_TYPE_SLB_1_0=y
 # CONFIG_BOARD_TYPE_OTHER is not set
-#   MMU Features/Additions
+#   MMU Features / Additions
 #     Led config
-#       Neopixel per-gate pins    
-#       end of Neopixel per-gate pins    
-#       Neopixel box pins         
-#       end of Neopixel box pins         
+#       Neopixel per-gate pins
+#       end of Neopixel per-gate pins
+#       Neopixel per-gate box pins
+#       end of Neopixel per-gate box pins
 #     end of Led config
+#     _
+#     Fan config
+#       Fan pins
+#       end of Fan pins
+#     end of Fan config
+#     _
 #     Buffer config
 #       _
 #       Sensors
 #       _
 #       Tuning params (MMU_CALIBRATE_PSENSOR)
 #     end of Buffer config
+#     _
 #     Environment sensor config
+#       Gate 0 sensor
+#       end of Gate 0 sensor
+#       Gate 1 sensor
+#       end of Gate 1 sensor
+#       Gate 2 sensor
+#       end of Gate 2 sensor
+#       Gate 3 sensor
+#       end of Gate 3 sensor
 #     end of Environment sensor config
-#     Pins must be set under "Pins" section
-#     Fan configuration
-#     end of Fan configuration
-#     Fan pins
-#     end of Fan pins
+#     Mmu eject buttons
+#     end of Mmu eject buttons
+#     _
 #     _
 #     Filament sensors
 #     end of Filament sensors
-#   end of MMU Features/Additions
+#   end of MMU Features / Additions
 #   _
 #   MCU connection
 # CONFIG_CHOICE_MMU_CONNECTION_TYPE_SERIAL is not set #~DEFAULT~#
@@ -461,10 +517,12 @@ CONFIG_PARAM_GEAR_TMC="tmc2209" #~DEFAULT~#
 #     end of Mmu entry sensor pins
 #     Mmu exit sensor pins
 #     end of Mmu exit sensor pins
-#     Neopixel per-gate pins    
-#     end of Neopixel per-gate pins    
-#     Neopixel box pins         
-#     end of Neopixel box pins         
+#     Neopixel per-gate pins
+#     end of Neopixel per-gate pins
+#     Neopixel box pins
+#     end of Neopixel box pins
+#     Fan per-gate pins
+#     end of Fan per-gate pins
 #   end of Pins / TMC
 #   _
 #   Toolhead sensors/settings
@@ -566,12 +624,6 @@ CONFIG_PARAM_TANGLE_PREVENTION_ENABLED=1 #~DEFAULT~#
 CONFIG_PARAM_TANGLE_PREVENTION_THRESHOLD=0.3 #~DEFAULT~#
 CONFIG_PARAM_TANGLE_PREVENTION_RELEASE=0.2 #~DEFAULT~#
 #     end of FlowGuard (clog/tangle/runout detection)
-#     Buffer config
-#       _
-#       Sensors
-#       _
-#       Tuning params (MMU_CALIBRATE_PSENSOR)
-#     end of Buffer config
 #     Calibration/Autotuning
 CONFIG_BOOL_AUTOCAL_BOWDEN_LENGTH=y #~DEFAULT~#
 CONFIG_PARAM_AUTOCAL_BOWDEN_LENGTH=1 #~DEFAULT~#
@@ -587,3 +639,10 @@ CONFIG_PARAM_SKIP_CAL_ENCODER=1 #~DEFAULT~#
 #   _
 #   Paths & Services
 #   end of Paths & Services
+CONFIG_SHOW_WARNINGS=y
+CONFIG_W3=y
+CONFIG_W4=y
+#   _
+#   _Config Warnings
+#   Leds are enabled but no MCU pin defined
+#   Fans are enabled but no MCU pin defined
