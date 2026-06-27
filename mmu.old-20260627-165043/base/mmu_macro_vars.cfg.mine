@@ -528,6 +528,6 @@ variable_fan_on_temp            : 49.0
 variable_fan_off_temp           : 47.0 
 variable_fan_polling_time       : 5.0 
 variable_fan_control_enabled    : 1 
-variable_fan_forced             : 2 # 0=all OFF, 1=all ON, 2=AUTO, 
+variable_fan_forced             : -1 # -1=AUTO, 0=all OFF, 1=all ON
 variable_fan_sensors            : "unit0_env0, unit0_env1, unit0_env2, unit0_env3" # Comma-separated temperature_sensor names
 variable_fans                   : "_unit0_fan0, _unit0_fan1, _unit0_fan2, _unit0_fan3" # Comma-separated fan names
