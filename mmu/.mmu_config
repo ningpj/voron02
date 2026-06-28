@@ -482,6 +482,7 @@ CONFIG_BOARD_TYPE_SLB_1_0=y
 #       Gate 3 sensor
 #       end of Gate 3 sensor
 #     end of Environment sensor config
+#     _
 #     Mmu eject buttons
 #     end of Mmu eject buttons
 #     _
