@@ -261,7 +261,7 @@ variable_pre_load_position                  : -999, -999, 0	; x,y,z-hop position
 
 variable_restore_xy_pos                     : 'next'	; last|next|none - What x,y position the toolhead should travel to after a "toolchange"
 
-variable_park_travel_speed                  : 800		; Speed for any travel movement XY(Z) in mm/s
+variable_park_travel_speed                  : 200		; Speed for any travel movement XY(Z) in mm/s
 variable_park_lift_speed                    : 15		; Z-only travel speed in mm/s
 variable_retract_speed                      : 40		; Speed of the retract move in mm/s
 variable_unretract_speed                    : 30		; Speed of the unretract move in mm/s
@@ -304,8 +304,8 @@ variable_user_post_preload_extension        : '_NFC_SCAN_JOG_PRELOAD'	; Executed
 description: Happy Hare client macro configuration variables
 gcode: # Leave empty
 
-variable_reset_ttg_on_cancel                : True		; True/False, Whether reset TTG map if print is canceled
-variable_unload_tool_on_cancel              : True		; True/False, Whether to unload the tool on cancel
+variable_reset_ttg_on_cancel                : False		; True/False, Whether reset TTG map if print is canceled
+variable_unload_tool_on_cancel              : False		; True/False, Whether to unload the tool on cancel
 
 # You can extend functionality by adding a command (or call to your gcode macro)
 variable_user_pause_extension               : ''		; Executed after the klipper base pause
@@ -375,7 +375,7 @@ variable_pin_loc_compressed_xy              : 4.7, 16.5	; x,y coordinates of ful
 
 # Retract length and speed after the cut so that the cutter blade doesn't
 # get stuck on return to origin position
-variable_rip_length                         : 4		; Distance in mm to retract to aid lever decompression (>= 0)
+variable_rip_length                         : 4.0		; Distance in mm to retract to aid lever decompression (>= 0)
 variable_rip_speed                          : 80		; Speed mm/s
 
 # Pushback of the remaining tip from the cold end into the hotend. This does
@@ -383,7 +383,7 @@ variable_rip_speed                          : 80		; Speed mm/s
 # stays in hot end and the "nail head" of the cut is pushed back past the
 # PTFE/metal junction so it cannot cause clogging problems on future loads.
 # Cannot be larger than 'retract_length' - `toolhead_ooze_reduction`
-variable_pushback_length                    : 39		; TUNE ME: PTFE tube length + 3mm is good starting point
+variable_pushback_length                    : 39	; TUNE ME: PTFE tube length + 3mm is good starting point
 variable_pushback_dwell_time                : 0		; Time in ms to dwell after the pushback
 
 # Speed related settings for tip cutting
@@ -399,7 +399,6 @@ variable_evacuate_speed                     : 400		; Speed mm/s
 variable_cut_dwell_time                     : 50		; Time in ms to dwell at the cut point
 variable_cut_fast_move_fraction             : 0.5		; Fraction of the move that uses fast move
 variable_extruder_move_speed                : 50		; Speed mm/s for all extruder movement
-variable_cut_iterations                     : 2		; Number of cuts to perform.  Increase if your cutter struggles to cut certain types of filament
 
 # Safety margin for fast vs slow travel. When traveling to the pin location
 # we make a safer but longer move if we are closer to the pin than this
@@ -509,7 +508,7 @@ gcode: # Leave empty
 
 # Set speed as fast as you can without the extruder skipping steps. Note that
 # you can increase the extruder current for purging in mmu_parameters.cfg
-variable_extruder_purge_speed               : 8		; Speed in mm/s for purging
+variable_extruder_purge_speed               : 7		; Speed in mm/s for purging
 
 
 
@@ -525,10 +524,10 @@ variable_extruder_purge_speed               : 8		; Speed in mm/s for purging
 description: Happy Hare Fan / temperature control settings
 gcode: 
 
-variable_fan_on_temp                        : 49.0
-variable_fan_off_temp                       : 47.0
-variable_fan_polling_time                   : 5.0
-variable_fan_control_enabled                : 1
+variable_fan_on_temp                        : 49.0 
+variable_fan_off_temp                       : 47.0 
+variable_fan_polling_time                   : 5.0 
+variable_fan_control_enabled                : 1 
 variable_fan_forced                         : 2 # 0=all OFF, 1=all ON, 2=AUTO, 
 variable_fan_sensors                        : "_unit0_mcu0, _unit0_mcu1, _unit0_mcu2, _unit0_mcu3" # Comma-separated temperature_sensor names
 variable_fans                               : "_unit0_fan0, _unit0_fan1, _unit0_fan2, _unit0_fan3" # Comma-separated fan names
