@@ -566,23 +566,6 @@ CONFIG_PARAM_GEAR_TMC="tmc2209" #~DEFAULT~#
 #     _
 #     _Toolhead dimensions
 #   end of Toolhead sensors/settings
-#   Endstops and Bowden movement
-#     _Gate homing
-CONFIG_CHOICE_GATE_HOMING_ENDSTOP_EXIT=y #~DEFAULT~#
-CONFIG_PARAM_GATE_HOMING_ENDSTOP="mmu_exit" #~DEFAULT~#
-CONFIG_CHOICE_GATE_PRELOAD_ENDSTOP_DEFAULT=y #~DEFAULT~#
-# CONFIG_CHOICE_GATE_PRELOAD_ENDSTOP_EXIT is not set #~DEFAULT~#
-CONFIG_PARAM_GATE_PRELOAD_ENDSTOP="" #~DEFAULT~#
-CONFIG_PARAM_BOWDEN_UNLOAD_HOMING_BUFFER=40 #~DEFAULT~#
-#     _
-#     _Extruder homing
-CONFIG_CHOICE_EXTRUDER_HOMING_ENDSTOP_COMPRESSION=y #~DEFAULT~#
-# CONFIG_CHOICE_EXTRUDER_HOMING_ENDSTOP_NONE is not set #~DEFAULT~#
-CONFIG_PARAM_EXTRUDER_HOMING_ENDSTOP="filament_compression" #~DEFAULT~#
-CONFIG_PARAM_BOWDEN_LOAD_HOMING_BUFFER=20 #~DEFAULT~#
-CONFIG_PARAM_EXTRUDER_COLLISION_HOMING_CURRENT=30 #~DEFAULT~#
-CONFIG_PARAM_EXTRUDER_HOMING_MAX=100 #~DEFAULT~#
-#   end of Endstops and Bowden movement
 #   Software Options
 #     Logging
 #     end of Logging
@@ -635,7 +618,7 @@ CONFIG_PARAM_EXTRUDER_HOMING_MAX=100 #~DEFAULT~#
 #     Purge (_MMU_PURGE)
 #     end of Purge (_MMU_PURGE)
 #   end of Macro Variables
-#   Other Settings
+#   Raw Settings
 CONFIG_PARAM_EXTRUDER_NAME="extruder" #~DEFAULT~#
 #     Speeds
 #       _Bowden movement speeds (mm/s)
@@ -646,6 +629,16 @@ CONFIG_PARAM_EXTRUDER_NAME="extruder" #~DEFAULT~#
 #     end of Gear stepper
 #     Filament sensors
 #     end of Filament sensors
+#     Endstops for Bowden movement
+CONFIG_CHOICE_GATE_HOMING_ENDSTOP_EXIT=y #~DEFAULT~#
+CONFIG_PARAM_GATE_HOMING_ENDSTOP="mmu_exit" #~DEFAULT~#
+CONFIG_CHOICE_GATE_PRELOAD_ENDSTOP_DEFAULT=y #~DEFAULT~#
+# CONFIG_CHOICE_GATE_PRELOAD_ENDSTOP_EXIT is not set #~DEFAULT~#
+CONFIG_PARAM_GATE_PRELOAD_ENDSTOP="" #~DEFAULT~#
+CONFIG_CHOICE_EXTRUDER_HOMING_ENDSTOP_COMPRESSION=y #~DEFAULT~#
+# CONFIG_CHOICE_EXTRUDER_HOMING_ENDSTOP_NONE is not set #~DEFAULT~#
+CONFIG_PARAM_EXTRUDER_HOMING_ENDSTOP="filament_compression" #~DEFAULT~#
+#     end of Endstops for Bowden movement
 #     Gate loading & parking
 #     end of Gate loading & parking
 #     MMU/Extruder sync
@@ -678,7 +671,7 @@ CONFIG_PARAM_SKIP_CAL_ROTATION_DISTANCE=1 #~DEFAULT~#
 CONFIG_PARAM_AUTOTUNE_ROTATION_DISTANCE=0 #~DEFAULT~#
 CONFIG_PARAM_SKIP_CAL_ENCODER=1 #~DEFAULT~#
 #     end of Calibration/Autotuning
-#   end of Other Settings
+#   end of Raw Settings
 #   _
 #   Paths & Services
 #   end of Paths & Services
@@ -689,7 +682,7 @@ CONFIG_W3=y
 #   Custom MMU selected. You will need to carefully check configuration
 #   Unknown MCU board selected. You will need to configure all pins
 #   Toolhead type is 'other'. Are you sure yours is not listed?
-#   No gate homing endstop configured
+#   No gate homing endstop [Raw Settings/Endstops]
 #   -unused-
 #   Leds are enabled but no MCU pin defined
 #   Fans are enabled but no MCU pin defined
