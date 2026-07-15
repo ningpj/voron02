@@ -16,6 +16,8 @@ Backups for Voron Design VORON 0.2 with 120mm Bed, SKR Pico mmu, Mellow Fly SHT-
 + Split Z-cover retrofit remix (https://www.printables.com/model/1356175-voron-02-z-motor-cover-plate-remix-360-cover)
 + Tophat sealing blocks (https://www.printables.com/model/728972-voron-v02-tophat-1515-sealing-block)
 + 130° Aliexpress Wideangle Picam
++ Crossbow filament cutter
++ 4 Lane EMU MMU
 
 <img width="600" height="870" alt="voron02" src="https://github.com/user-attachments/assets/771a66b5-65c0-43b8-a071-cab2198ce950" />
 
