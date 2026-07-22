@@ -55,10 +55,10 @@ CONFIG_CHOICE_LOG_LEVEL_INFO=y #~DEFAULT~#
 CONFIG_PARAM_LOG_LEVEL=1 #~DEFAULT~#
 # CONFIG_CHOICE_LOG_FILE_LEVEL_ESSENTIAL is not set #~DEFAULT~#
 # CONFIG_CHOICE_LOG_FILE_LEVEL_INFO is not set #~DEFAULT~#
-CONFIG_CHOICE_LOG_FILE_LEVEL_DEBUG=y #~DEFAULT~#
-# CONFIG_CHOICE_LOG_FILE_LEVEL_TRACE is not set #~DEFAULT~#
+# CONFIG_CHOICE_LOG_FILE_LEVEL_DEBUG is not set #~DEFAULT~#
+CONFIG_CHOICE_LOG_FILE_LEVEL_TRACE=y
 # CONFIG_CHOICE_LOG_FILE_LEVEL_STEPPER is not set #~DEFAULT~#
-CONFIG_PARAM_LOG_FILE_LEVEL=2 #~DEFAULT~#
+CONFIG_PARAM_LOG_FILE_LEVEL=3 #~DEFAULT~#
 CONFIG_BOOL_ENDLESS_SPOOL_ENABLED=y
 CONFIG_PARAM_ENDLESS_SPOOL_ENABLED=1 #~DEFAULT~#
 # CONFIG_CHOICE_SPOOLMAN_SUPPORT_OFF is not set #~DEFAULT~#
@@ -701,3 +701,4 @@ CONFIG_W3=y
 #   MMU heater is enabled but heater name(s) not defined
 #   MMU environment sensor is enabled but sensor name(s) not defined
 #   Sync-feedback buffer configured but it had no sensors defined
+#   Warning: Sync-feedback buffer configured with both analog and digital inputs
