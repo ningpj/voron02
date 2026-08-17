@@ -100,12 +100,3 @@ managed_services = KlipperScreen
 server = http://io.local:7912
 sync_rate = 5
 
-[update_manager Happy-Hare-RFID-Reader]
-type = git_repo
-path = /home/pi/rfid-reader
-origin = https://github.com/cwiegert/Happy-Hare-RFID-Reader.git
-primary_branch = main
-managed_services = klipper
-install_script = install.sh
-info_tags = desc=EMU NFC Gate Reader for Happy Hare
-
