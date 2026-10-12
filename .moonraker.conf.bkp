@@ -62,12 +62,6 @@ managed_services = klipper
 primary_branch = main
 install_script = install.sh
 
-[update_manager crowsnest]
-type = git_repo
-path = ~/crowsnest
-origin = https://github.com/mainsail-crew/crowsnest.git
-install_script = tools/pkglist.sh
-
 [update_manager update_klipper_and_mcus]
 type = git_repo
 primary_branch = main
@@ -99,4 +93,14 @@ managed_services = KlipperScreen
 [spoolman]
 server = http://io.local:7912
 sync_rate = 5
+
+[update_manager crowsnest]
+type = git_repo
+path = ~/crowsnest
+origin = https://github.com/mainsail-crew/crowsnest.git
+primary_branch = v5
+managed_services = crowsnest
+system_dependencies = system-dependencies.json
+virtualenv = ~/crowsnest-env
+requirements = requirements.txt
 
