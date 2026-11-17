@@ -4,7 +4,7 @@ Klipper configuration backups.
 
 ## Description
 
-Backups for Voron Design VORON 0.2 with 120mm Bed, SKR Pico mmu, Mellow Fly SHT-36 v2/UTOC & Pi 4 2GB. 
+Backups for Voron Design VORON 0.2 with 120mm Bed, Mellow Fly D5 with 2240's, Mellow Fly SHT-36 v2 & Pi 4 2GB. 
 
 + Mini Fridge door
 + Tulip 2.0 Gantry (https://github.com/Amekyras/tulip)
@@ -21,28 +21,27 @@ Backups for Voron Design VORON 0.2 with 120mm Bed, SKR Pico mmu, Mellow Fly SHT-
 
 <img width="600" height="870" alt="voron02" src="https://github.com/user-attachments/assets/771a66b5-65c0-43b8-a071-cab2198ce950" />
 
+## Mellow Fly D5 PIN assignments
 
-
-## SKR Pico v1.0 PIN Assignments
-
-|**Component**|**Description**|**PIN**
-|-|-|-
-|HB|Bed|GPIO21
-|FAN1|Chamber COB LEDs|GPIO17
-|FAN2|Controller Fan|GPIO18 - daisy chained
-|FAN2|Stealth Skirt Fans|GPIO18 - daisy chained
-|FAN3|Nevermore v4 Micro|GPIO20
-|THB|Bed Thermistor|GPIO26
-|TH0|Chamber Thermistor|GPIO27
-|Z-STOP|Z Endstop|GPIO25
-|RGB|Neopixels|GPIO24
+|**Description**|**PIN**
+|-|-
+|Bed fan|PC6
+|Bed heater|PC7
+|Bed thermistor|PC0
+|Bed neopixel|PA9
+|Chamber thermistor|PC1
+|Z-STOP|PD2 - - Note, Fly D5 X-STOP & Y-STOP share gpios with Driver0 & Driver1 diag
+|Controller fan|PC9 - daisy chained
+|Stealth Skirt fans|PC9 - daisy chained
+|VOC fan|PC8
+|Chamber COB LEDs| N/A - VCC, always on
 
 ## Mellow SHT-36v2 PIN Assignments
 |**Component**|**Description**|**PIN**
 |-|-|-
-|HE0|Hotend Heater|SHT:HE0
-|TH0|Hotend Sensor|SHT:TH0
-|FAN0|Hotend Fan|SHT:FAN0
-|FAN1|Part Fan|SHT:FAN1
-|PROBE_2|20x20x6 Toolhead Fan|SHT:PROBE_2
+|HE0|Hotend heater|SHT:HE0
+|TH0|Hotend sensor|SHT:TH0
+|FAN0|Hotend fan|SHT:FAN0
+|FAN1|Part fan|SHT:FAN1
+|PROBE_2|Toolhead MCU fan|SHT:PROBE_2
 
