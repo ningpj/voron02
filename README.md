@@ -30,7 +30,7 @@ Backups for Voron Design VORON 0.2 with 120mm Bed, Mellow Fly D5 with 2240's, Me
 |Bed thermistor|PC0
 |Bed neopixel|PA9
 |Chamber thermistor|PC1
-|Z-STOP|PD2 - - Note, Fly D5 X-STOP & Y-STOP share gpios with Driver0 & Driver1 diag
+|Z-STOP|PD2 - Note, Fly D5 X-STOP & Y-STOP share gpios with Driver0 & Driver1 diag pins
 |Controller fan|PC9 - daisy chained
 |Stealth Skirt fans|PC9 - daisy chained
 |VOC fan|PC8
@@ -39,9 +39,8 @@ Backups for Voron Design VORON 0.2 with 120mm Bed, Mellow Fly D5 with 2240's, Me
 ## Mellow SHT-36v2 PIN Assignments
 |**Component**|**Description**|**PIN**
 |-|-|-
-|HE0|Hotend heater|SHT:HE0
-|TH0|Hotend sensor|SHT:TH0
-|FAN0|Hotend fan|SHT:FAN0
-|FAN1|Part fan|SHT:FAN1
-|PROBE_2|Toolhead MCU fan|SHT:PROBE_2
-
+|HE0|Hotend heater|SHT:HE0/PA8
+|TH0|Hotend sensor|SHT:TH0/PA3
+|FAN0|Hotend fan|SHT:FAN0/PB10
+|FAN1|Part fan|SHT:FAN1/PB11
+|PROBE_2|Toolhead MCU fan|SHT:PROBE_2/PB1
